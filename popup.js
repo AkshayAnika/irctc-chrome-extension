@@ -51,41 +51,6 @@ $(document).ready(function () {
         });
     });
 
-    // Save button
-    $(".save").on("click", function () {
-        const username = $("#username").val().trim();
-        const password = $("#password").val().trim();
-
-        if (username && password) {
-            chrome.storage.local.set(
-                {
-                    irctc_username: username,
-                    irctc_password: password,
-                },
-                () => {
-                    chrome.runtime.sendMessage({
-                        action: "showPopupInTab",
-                        message: "Credentials saved successfully ✅",
-                    });
-                    window.close();
-                }
-            );
-        } else {
-            chrome.runtime.sendMessage({
-                action: "showPopupInTab",
-                message: "Username or Password is empty ❌",
-            });
-        }
-    });
-
-    // Never button
-    $(".never").on("click", function () {
-        chrome.storage.local.clear(() => {
-            $("#username, #password").val("");
-            window.close();
-        });
-    });
-
     // Set footer logo
     const logoUrl = chrome.runtime.getURL("images/icon48.png");
     $("#footer-logo").attr("src", logoUrl);
