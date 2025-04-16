@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>IRCTC Credentials</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+        rel="stylesheet" />
+</head>
+
+<body>
+    <div class="container">
+        <div class="field">
+            <label class="font-poppins">Username</label>
+            <div class="input-wrapper">
+                <input type="text" id="username" readonly />
+                <button class="copy" data-target="username">
+                    <img src="https://img.icons8.com/material-outlined/24/copy.png" alt="Copy Icon" width="18"
+                        fill="#fff" />
+                </button>
+            </div>
+        </div>
+
+        <div class="field">
+            <label>Password</label>
+            <div class="input-wrapper">
+                <input type="password" id="password" readonly />
+                <button class="toggle" type="button">
+                    <img width="16" src="https://img.icons8.com/fluency-systems-regular/24/visible--v1.png"
+                        alt="Show" />
+                </button>
+                <button class="copy" data-target="password">
+                    <img src="https://img.icons8.com/material-outlined/24/copy.png" alt="Copy Icon" width="18" />
+                </button>
+            </div>
+        </div>
+
+        <div class="field note">
+            <label>Site</label>
+            <a href="https://www.irctc.co.in" target="_blank">www.irctc.co.in</a>
+        </div>
+
+        <p class="footnote">
+            Your username and password will be saved only to this device.
+        </p>
+
+
+        <div class="actions">
+            <button class="delete">
+                <img width="16" src="https://img.icons8.com/material/16/ffffff/delete--v2.png" alt="delete" />
+                <p style="margin-left: 5px">Clear Data</p>
+            </button>
+        </div>
+    </div>
+
+    <p class="footerText" id="powered-by">
+        <img id="footer-logo" style="
+          vertical-align: middle;
+          width: 16px;
+          height: 16px;
+          margin-right: 5px;
+          text-align: center;
+        " />
+        Powered by IRCTC
+    </p>
+
+    <script src="jquery-3.7.1.min.js"></script>
+    <script src="popup.js"></script>
+</body>
+
+</html>
