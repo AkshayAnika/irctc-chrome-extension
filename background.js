@@ -4,22 +4,6 @@ chrome.runtime.onMessage.addListener((message) => {
     }
 });
 
-chrome.storage.onChanged.addListener((changes, area) => {
-    if (area === "local") {
-        if (changes.irctc_username) {
-            console.log(
-                "[Service Worker] Username updated to:",
-                changes.irctc_username.newValue
-            );
-        }
-        if (changes.irctc_password) {
-            console.log(
-                "[Service Worker] Password updated to:",
-                changes.irctc_password.newValue
-            );
-        }
-    }
-});
 
 chrome.runtime.onMessage.addListener(function (request, sender, sendResponse) {
     if (request.action === "showPopupInTab") {

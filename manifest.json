@@ -1,8 +1,8 @@
 {
     "manifest_version": 3,
-    "name": "IRCTC Login Capturer",
-    "version": "1.0",
-    "description": "Capture IRCTC login details and store in local storage",
+    "name": "IRCTC Extension",
+    "version": "1.0.0",
+    "description": "Capture IRCTC login details for the hassle free login with autofill feature.",
     "permissions": [
         "storage",
         "scripting",
